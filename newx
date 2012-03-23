@@ -1,0 +1,13 @@
+#!/bin/sh -x
+unset SESSION_MANAGER XDG_SESSION_COOKIE DBUS_SESSION_BUS_ADDRESS DESKTOP_SESSION 
+#Xephyr -screen 1270x715 -ac +bs +xinerama -fakexa -dpi 110 :3 &
+Xephyr -zaphod -screen 1270x715 -ac +bs +xinerama -dpi 110 :3 &
+sleep 1s
+DISPLAY=:3 
+xrdb < ~/.Xresources
+export XMODIFIERS=@im=fcitx QT_IM_MODULE=xim GTK_IM_MODULE=xim ; fcitx & sleep 1
+#export XMODIFIERS=@im=xsunpinyin QT_IM_MODULE=xim GTK_IM_MODULE=xim ; xsunpinyin & sleep 1
+#${@:-rxvt} &
+eval ${@:-'rxvt & metacity -c & gnome-settings-daemon &'} &
+
+

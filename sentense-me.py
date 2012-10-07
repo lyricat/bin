@@ -2,7 +2,7 @@
 
 import os, commands, random
 os.system('get-sentense-me.sh')
-directory = commands.getoutput('find '+ os.environ['HOME'] + '/Pictures/sentense.me/wallpapers -iname *.png')
+directory = commands.getoutput('find /home/shellex/Pictures/sentense.me/wallpapers -iname *.png')
 
 directory = directory.split('\n')
 

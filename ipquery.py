@@ -11,9 +11,8 @@ bones7456 最后修改于 2009-02-02
 #数据文件下载地址： http://update.cz88.net/soft/qqwry.rar
 from struct import unpack, pack
 import sys, _socket, mmap
-import os
 
-DataFileName = os.environ['HOME'] + "/Static/QQWry.Dat"
+DataFileName="/home/shellex/Static/QQWry.Dat"
 
 def _ip2ulong(ip):
     '''点分十进制 -> unsigned long

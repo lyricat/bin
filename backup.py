@@ -5,7 +5,7 @@ import sys
 import time
 import subprocess
 
-base_dir = os.environ['HOME']
+base_dir = '/home/shellex'
 src_dirs = [
      'Apps', 'Artwork', 'Desktop'
    , 'Dev', 'Documents', 'Ivory Tower'
